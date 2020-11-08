@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Checkr</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/assets/css/main.css') }}" />
+	<noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/assets/css/noscript.css') }}" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Home</a></li>
+					<li><a href="#one">Who we are</a></li>
+					<li><a href="#two">How does it work</a></li>
+					<li><a href="#three">Get in touch</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<h1>Checkr</h1>
+				<p>Check the authenticity of an article with just a click</p>
+				<ul class="actions">
+					<form method="POST" action="/info">
+						<input class="button  fit" type="url" id="input" placeholder="Paste the URL" required
+							name="url_input" style="width: 50vw;">
+					</form>
+
+
+				</ul>
+			</div>
+		</section>
+
+		<!-- One -->
+		<section id="one" class="wrapper style2 spotlights">
+			<section>
+				<div class="content">
+					<div class="inner">
+						<h2> Riley Garcia</h2>
+						<p>I'm a 4th year Biomedical Engineer Major and Computer Science minor at the University of
+							California, Irvine</p>
+						<ul class="actions">
+							<li><a href="https://www.linkedin.com/in/riley-garcia-05056a19a/"
+									class="button">LinkedIn</a></li>
+						</ul>
+					</div>
+				</div>
+				<a href="#" class="image"><img src="https://media-exp1.licdn.com/dms/image/C5603AQFNfxIaXf3xgg/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=YyK8VBX4KxyStrqfJ_Elcv7uVEEBULfIrqjGa--Ks_A" alt="" data-position="25% 25%" /></a>
+			</section>
+			<section>
+				<a href="#" class="image"><img
+						src="https://cdn.discordapp.com/attachments/774173109510995970/774823997036429322/IMG_0923.JPG"
+						alt="" data-position="25% 25%" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Aaron Song</h2>
+						<p>1st year Computer Engineering Major at University of California, Riverside</p>
+						<ul class="actions">
+							<li>
+								<a href="https://www.linkedin.com/in/aaron-song-6ba89615b/" class="button">LinkedIn</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+
+				<div class="content">
+					<div class="inner">
+						<h2>Jaron Zhu</h2>
+						<p>I'm a 3rd year Electrical Engineering Major at University of California, Riverside</p>
+						<ul class="actions">
+							<li><a href="https://www.linkedin.com/in/jaron-zhu-655995163/" class="button">LinkedIn</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<a href="#" class="image"><img src="https://media-exp1.licdn.com/dms/image/C5603AQGaCV8nX32qHA/profile-displayphoto-shrink_200_200/0?e=1610582400&v=beta&t=6Lwdp9S7DzTSmh8yrhaOS4fPGeuw0-5OMrdoF9SUpZ4" alt="" data-position="25% 25%" /></a>
+			</section>
+			<section>
+				<a href="#" class="image"><img src="static/styles/images/B151388C-FE7A-4143-A639-BE2D6CD4E04F_1_105_c.jpeg" alt="" data-position="25% 25%" /></a>
+				<div class="content">
+					<div class="inner">
+						<h2>Sanath Nair</h2>
+						<p>High School Junior attending Oxford Academy. I have taken coding classes in freshman and
+							sophmore year and overall I enjoy coding.</p>
+						<ul class="actions">
+							<li><a href="https://www.instagram.com/sanathnair09/" class="button">Insta</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Two -->
+		<section id="two" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>How does it work</h2>
+				<p>With a click of a button, you can find the credentials of your article. </p>
+				<div class="features">
+					<section>
+						<span class="icon solid major fa-code"></span>
+						<h3>Python Web Scraper</h3>
+						<p>Through the use of a Python Web Scraper, Checkr finds the authors of the article,
+							and will find information about the author. From the
+							information, Checkr will validate whether the article is reliable. </p>
+					</section>
+					<section>
+						<span class="icon solid major fa-lock"></span>
+						<h3>Validity Score </h3>
+						<p>Checkr will give you a score on the validity of your article. From 0, being the
+							least valid, to 100, being extremely valid.</p>
+					</section>
+					<section>
+						<span class="icon solid major fa-cog"></span>
+						<h3></h3>
+						<p></p>
+					</section>
+					<section>
+						<span class="icon solid major fa-desktop"></span>
+						<h3></h3>
+						<p></p>
+					</section>
+					<section>
+						<span class="icon solid major fa-link"></span>
+						<h3></h3>
+						<p></p>
+					</section>
+					<section>
+						<span class="icon major fa-gem"></span>
+						<h3></h3>
+						<p></p>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- Three -->
+		<section id="three" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Get in touch</h2>
+				<p>Hey, it's pizza time.</p>
+				<div class="split style1">
+					<section>
+						<form method="post" action="#">
+							<div class="fields">
+								<div class="field half">
+									<label for="name">Name</label>
+									<input type="text" name="name" id="name" />
+								</div>
+								<div class="field half">
+									<label for="email">Email</label>
+									<input type="text" name="email" id="email" />
+								</div>
+								<div class="field">
+									<label for="message">Message</label>
+									<textarea name="message" id="message" rows="5"></textarea>
+								</div>
+							</div>
+							<ul class="actions">
+								<li><a href="" class="button submit">Send Message</a></li>
+							</ul>
+						</form>
+					</section>
+					<section>
+						<ul class="contact">
+							<li>
+								<h3>Address</h3>
+								<span>3395 University Ave, Riverside, CA 92501</span>
+							</li>
+							<li>
+								<h3>Email</h3>
+								<a href="#">PizzaHut@gmail.com</a>
+							</li>
+							<li>
+								<h3>Phone</h3>
+								<span>(951) 781-7777</span>
+							</li>
+							<li>
+								<h3>Social</h3>
+								<ul class="icons">
+									<li><a href="https://twitter.com/home" class="icon brands fa-twitter"><span
+												class="label">Twitter</span></a></li>
+									<li><a href="https://facebook.com" class="icon brands fa-facebook-f"><span
+												class="label">Facebook</span></a></li>
+									<li><a href="https://github.com" class="icon brands fa-github"><span class="label">GitHub</span></a>
+									</li>
+									<li><a href="https://instagram.com" class="icon brands fa-instagram"><span
+												class="label">Instagram</span></a></li>
+									<li><a href="linkedin.com" class="icon brands fa-linkedin-in"><span
+												class="label">LinkedIn</span></a></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Copyright 2020. All rights reserved.</li>
+				<li>Design: <a href="https://www.spaceforce.mil/">Space Force</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="{{ url_for('static', filename='styles/assets/js/jquery.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/jquery.scrollex.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/jquery.scrolly.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/browser.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/breakpoints.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/util.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/main.js') }}"></script>
+
+
+</body>
+
+</html>

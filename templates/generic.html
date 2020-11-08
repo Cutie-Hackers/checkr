@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Checkr</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/assets/css/main.css') }}" />
+	<noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles/assets/css/noscript.css') }}" /></noscript>
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<a href="{{ url_for('main') }}" class="title">Checkr</a>
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('main') }}">Back</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+
+		<!-- Main -->
+
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">{{ title }}</h1>
+			</div>
+
+		</section>
+
+		<section id='main' class="wrapper">
+			<div class="inner" style="display: flex; justify-content: center;">
+				<div id="fluid-meter" class="mx-auto"></div>
+			</div>
+		</section>
+		
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Authors</h1>
+				{% for author in authors %}
+				<p>{{ author}}</p>
+				{% endfor %}
+			</div>
+		</section>
+
+		<!-- Main -->
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<h1 class="major">Date and Time</h1>
+				<p>{{ date }}</p>
+			</div>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Untitled. All rights reserved.</li>
+				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="{{ url_for('static', filename='styles/assets/js/jquery.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/jquery.scrollex.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/jquery.scrolly.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/browser.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/breakpoints.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/util.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/main.js') }}"></script>
+	<script src="{{ url_for('static', filename='styles/assets/js/js-fluid-meter.js') }}"></script>
+	<script>
+		var fm = new FluidMeter();
+		fm.init({
+			targetContainer: document.getElementById("fluid-meter"),
+			fillPercentage: 91,
+			options: {
+				fontFamily: "Raleway",
+				drawPercentageSign: false,
+				drawBubbles: true,
+				size: 300,
+				borderWidth: 10,
+				backgroundColor: "#31254F",
+				foregroundFluidLayer: {
+					fillStyle: "purple",
+					angularSpeed: 100,
+					maxAmplitude: 12,
+					frequency: 30,
+					horizontalSpeed: -150
+				},
+				backgroundFluidLayer: {
+					fillStyle: "pink",
+					angularSpeed: 100,
+					maxAmplitude: 9,
+					frequency: 30,
+					horizontalSpeed: 150
+				}
+			}
+		});
+
+
+
+		window.onload = function () {
+			document.getElementById("submit-percentage-1").onclick = function () {
+				fm.setPercentage(Number(document.getElementById('percentage-1').value))
+			}
+			document.getElementById("submit-percentage-2").onclick = function () {
+				fm2.setPercentage(Number(document.getElementById('percentage-2').value))
+			}
+			document.getElementById("submit-percentage-3").onclick = function () {
+				fm3.setPercentage(Number(document.getElementById('percentage-3').value))
+			}
+		};
+	</script>
+
+</body>
+
+</html>
